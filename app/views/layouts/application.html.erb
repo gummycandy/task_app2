@@ -32,15 +32,19 @@
         </div>
         <div class="header-right-nav">
           <div class="nav-item">
-            <a class="btn btn-primary my-2 mx-3" href="/users/sign_in">ログイン</a>
-            <a class="btn btn-secondary" href="/users/sign_up">登録する</a>
+            <% if @current_user %>
+              <li>
+                <%= session[:user_id] %>
+              </li>
+            <% else %>
+              <a class="btn btn-primary my-2 mx-3" href="/login">ログイン</a>
+              <a class="btn btn-secondary" href="/sign_up">登録する</a>
+            <% end %>
           </div>
         </div>
       </div>
     </header>
-
     <%= yield %>
-
     <footer class="footer">
       <p>© 2020 POTEPAN.INC.</p>
     </footer>

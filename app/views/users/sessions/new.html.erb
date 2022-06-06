@@ -1,0 +1,26 @@
+<div class="container device">
+  <div class="device_frame">
+    <p class="my-4">ログイン</p>
+    <div class="device_inner">
+      <div class="form-error">
+        <% if @error_message %>
+          <%= @error_message %>
+        <% end %>
+      </div>
+      <%= form_with model: @user, class: "new_user" do |f| %>
+        <div class="field form-row">
+          <div class="col-2 required-b pt-2"></div>
+          <%= f.email_field :email, autofocus: true, autocomplete:"email", class:"form-control col-10 px-2", placeholder:"メールアドレス" %>
+        </div>
+        <div class="field form-row">
+          <div class="col-2 required-b pt-2"></div>
+          <%= f.password_field :password, autocomplete:"current-password", class:"form-control col-10 px-2", placeholder:"パスワード" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "ログイン", class:"form-control btn-primary my-4", data: { disable_with: "ログイン中" }  %>
+        </div>
+      <% end %>
+      <a href="/users/resistrations/new">新しいアカウントを作成</a><br>
+    </div>
+  </div>
+</div>

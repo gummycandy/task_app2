@@ -1,0 +1,174 @@
+.top .top-main {
+  background-image: url("/assets/img_cover_top.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+  max-width: 1140px;
+  }
+}
+
+.container {
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+
+@media (min-width: 992px) {
+  .col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  }
+}
+
+.col-lg-6 {
+position: relative;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.row {
+display: flex;
+flex-wrap: wrap;
+margin-right: -15px;
+margin-left: -15px;
+}
+
+.top .form-fream {
+height: 650px;
+display: flex;
+align-items: center;
+}
+
+.top .form-area {
+background: #fff;
+padding: 24px;
+border-radius: 5px;
+}
+
+.top .form-area-title {
+font-size: 28px;
+line-height: 33px;
+letter-spacing: 1px;
+}
+
+.mb-4 {
+margin-bottom: 1.5rem!important;
+}
+
+p {
+font-family: verdana, arial, helvetica, sans-serif;
+margin-top: 0;
+}
+
+label {
+display: block;
+margin-bottom: .5rem;
+}
+
+.form-control:nth-child(1) {
+color: #495057;
+background-color: #fff;
+}
+
+.form-control {
+display: block;
+width: 100%;
+height: calc(1.5em + .75rem + 2px);
+padding: .375rem .75rem;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+input {
+overflow: visible;
+margin: 0;
+font-family: inherit;
+}
+
+[type=submit]:not(:disabled) {
+cursor: pointer;
+}
+
+.btn-primary {
+background-color: #4a90e2 !important;
+color: #fff;
+border-color: #007bff;
+}
+
+[type=submit] {
+-webkit-appearance: button;
+}
+
+.m-5 {
+margin: 3rem!important;
+}
+
+.top .section-title {
+font-size: 24px;
+margin: 35px 0;
+font-weight: bold;
+}
+
+h1 {
+line-height: 1.2;
+}
+
+@media (min-width: 992px) {
+  .col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  }
+}
+
+.col-lg-3 {
+position: relative;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.top span {
+position: absolute;
+bottom: 50px;
+left: 0;
+right: 0;
+color: #fff;
+font-weight: bold;
+z-index: 1;
+margin: auto;
+text-align: center;
+font-size: 24px;
+}
+
+a {
+color: #000;
+text-decoration: none;
+background-color: transparent;
+}
+
+.top .panel-image {
+width: 100%;
+height: 360px;
+object-fit: cover;
+border-radius: 5px;
+margin-bottom: 25px;
+vertical-align: middle;
+border-style: none;
+}
+
+.shadow {
+box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+display: block;
+}

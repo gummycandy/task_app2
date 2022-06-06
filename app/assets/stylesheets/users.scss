@@ -1,4 +1,155 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-/* line 1, app/assets/stylesheets/device.scss */
+.device {
+  padding-top: 36px;
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.device_frame {
+  max-width: 600px;
+  text-align: center;
+  padding: 24px;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgba(21, 27, 38, 0.15) 0px 1px 3px 0px;
+}
+
+.device p {
+  font-size: 16px;
+}
+
+.my-4 {
+  margin-bottom: 1.5rem!important;
+  margin-top: 1.5rem!important;
+}
+
+p {
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 18px;
+}
+
+.device_inner {
+  width: 360px;
+  margin: 0px auto;
+}
+
+.new-user .input {
+  overflow: visible;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.input {
+  overflow: visible;
+  margin: 0;
+  font-family: inherit;
+}
+
+div.field {
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-row>[class*=col-] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.pt-2 {
+  padding-top: 0.5rem!important;
+}
+
+.col-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+  position: relative;
+  width: 100%;
+}
+
+.required-b::before {
+  content: "必須";
+  color: #fff;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0 5px;
+  box-sizing: border-box;
+}
+
+.px-2 {
+  padding-left: 0.5rem!important;
+  padding-right: 0.5rem!important;
+}
+
+.col-2 .form-control {
+  color: #495057;
+  background-color: #fff;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.col-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  position: relative;
+}
+
+div.actions {
+  margin-bottom: 10px;
+}
+
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #4a90e2 !important;
+  color: #fff;
+  border-color: #007bff;
+}
+
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+.device a {
+  color: #007bff !important;
+  text-decoration: none;
+  background-color: transparent;
+}
