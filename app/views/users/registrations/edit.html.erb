@@ -1,43 +1,59 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "usres/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="container-fiuld user">
+  <div class="row">
+    <div class="col-lg-2 user-nav user-nav-pc d-lg-block d-none">
+      <ul>
+        <li class=""><a href="/users/account">アカウント</a></li>
+        <li class="active"><a href="/users/profile">プロフィール</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2 user-nav user-nav-mobile d-lg-none">
+      <ul>
+        <li class=""><a href="/users/account">アカウント</a></li>
+        <li class="active"><a href="/users/profile">プロフィール</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-10 user-view">
+      <div class="user-view-box">
+        <div class="update-content">
+          <div class="row">
+            <h5>プロフィール</h5>
+          </div>
+        </div>
+        <!--<form class="edit_user" id="edit_user_1562" enctype="multipart/form-data" action="/users/profile" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="UDtQE8khZwawHQzdzwu4MIMrtYZ+bCco9iUHJcJIaXnSHSTisJPo5+Vei5zI1pPe0iOyFraBmNpZbB6khTM94A==">-->
+          <div class="update-content">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <div class="icon-box">
+                  <img alt="アイコン画像" class="icon-image host-icon" src="/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <label class="col-md-3 required-a" for="image">アイコン画像</label>
+              <!--<input class="mb-4 col-md-9" placeholder="アイコン画像をアップロード" type="file" name="user[image]" id="user_image">-->
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <label class="col-md-3 required-a" for="name">名前</label>
+              <!--<input class="form-control mb-4 col-md-9" placeholder="名前を入力" type="text" value="しゃけ" name="user[name]" id="user_name">-->
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <label class="col-md-3 required-a" for="introduction">自己紹介</label>
+              <!--<textarea rows="5" class="form-control mb-4 col-md-9" placeholder="自己紹介を入力" name="user[introduction]" id="user_introduction"></textarea>-->
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <!--<input type="submit" name="commit" value="更新" class="col-md-2 btn btn-primary mx-3" data-disable-with="更新">-->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

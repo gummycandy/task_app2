@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
-    get "signup", :to => "users/registrations#new"
-    post "signup", :to => "users/resistrations#create"
+    get "sign_up", :to => "users/registrations#new"
+    post "sign_up", :to => "users/registrations#create"
     get "login", :to => "users/sessions#new"
     get "logout", :to => "users/sessions#destroy"
+    get "user/:id/edit", :to => "users/registrations#edit"
     get "user/:id", :to => "users/registrations#show"
   end
 

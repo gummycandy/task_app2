@@ -20,7 +20,8 @@
           <%= f.submit "ログイン", class:"form-control btn-primary my-4", data: { disable_with: "ログイン中" }  %>
         </div>
       <% end %>
-      <a href="/users/resistrations/new">新しいアカウントを作成</a><br>
+      <%= link_to("新しいアカウントを作成", "/sign_up") %>
+      <br>
     </div>
   </div>
 </div>

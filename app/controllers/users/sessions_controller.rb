@@ -2,7 +2,7 @@
 
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
-
+  before_action :authenticate_user!, {only: [:sign_in, :logout]}
   # GET /resource/new
     def new
     end
@@ -11,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
     def sign_in
       @user = User.find_by(authenticate_user_params)
       if @user
-        session[:user_id] = @user.id
+        user_session[:user_id] = current_user.id
         flash[:notice] = "ログインしました"
         redirecto_to("/")
       else
@@ -23,7 +23,7 @@ class Users::SessionsController < Devise::SessionsController
     end
 
     def logout
-      session[:user_id] = nil
+      user_session[:user_id] = nil
       flash[:notice] = "ログアウトしました"
       redirect_to("/login")
     end
@@ -43,7 +43,7 @@ class Users::SessionsController < Devise::SessionsController
   private
 
     def authenticate_user_params
-      params.require(:user).permit(:email, :encrypted_password)
+      params.require(:user).permit(:email, :password)
     end
 
 end
